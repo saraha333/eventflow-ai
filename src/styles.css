@@ -1,0 +1,49 @@
+:root{--bg:#f4f6fb;--card:#fff;--tx:#1b1f2a;--mu:#5b6475;--bd:#dfe3ec;--ac:#2f5bea;--bad:#c0262d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ac)}h1{font-size:24px;margin:0}h2{font-size:17px;margin:0 0 10px;display:flex;gap:6px;align-items:center}h3{margin:16px 0 8px}
+.app{display:flex;min-height:100vh}
+.side{width:230px;background:#101828;color:#fff;padding:18px 12px;display:flex;flex-direction:column;gap:12px;position:sticky;top:0;height:100vh}
+.brand{font-size:20px;font-weight:700;padding:4px 10px}.brand b{color:#7b9bff}
+.side nav{display:flex;flex-direction:column;gap:4px;flex:1}
+.side nav a{color:#cbd5e1;text-decoration:none;padding:9px 10px;border-radius:8px;display:flex;gap:10px;align-items:center}
+.side nav a.on,.side nav a:hover{background:#1d2939;color:#fff}
+.main{flex:1;min-width:0}.page{max-width:1100px;margin:0 auto;padding:18px}
+.menu{display:none;margin:10px 12px 0}
+.notice{background:#fff7e0;color:#6b4a00;border-bottom:1px solid #f0d58a;padding:8px 18px;font-size:13px;display:flex;gap:8px;align-items:center}
+.head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-bottom:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap}.muted{color:var(--mu)}.grow{flex:1;min-width:80px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:14px}
+.grid4{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:14px}
+.grid3{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.stat{margin:0;display:flex;flex-direction:column}.stat span{color:var(--mu);font-size:13px}.stat strong{font-size:26px}.stat small{color:var(--mu)}
+.chart{height:260px}
+.btn,button{font:inherit;border:1px solid var(--bd);background:#fff;color:var(--tx);padding:8px 14px;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.btn.primary{background:var(--ac);border-color:var(--ac);color:#fff}.btn.danger{color:var(--bad);border-color:var(--bad)}
+.ghost{background:transparent;color:#cbd5e1;border-color:#344054}.icon{padding:5px}
+.field{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--mu);margin-bottom:10px}
+input,select,textarea{font:inherit;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;width:100%;background:#fff;color:var(--tx)}
+input[type=checkbox]{width:auto}.check{display:flex;gap:8px;align-items:center;margin:8px 0}
+.inline{display:flex;gap:8px;margin-top:12px}
+.form .btn{margin-top:8px}.bad-text{color:var(--bad)}
+.bar{height:10px;background:var(--bd);border-radius:6px;overflow:hidden;min-width:60px;margin-bottom:14px}.bar i{display:block;height:100%;background:#16a34a}
+.list{list-style:none;padding:0;margin:0 0 10px}.list li{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid var(--bd)}
+.list .bar{margin:0}
+.checks{list-style:none;padding:0;columns:2 240px}
+.tag{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--bd);margin-left:auto;white-space:nowrap}
+.tag.bad{border-color:var(--bad);color:var(--bad)}
+.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--bd);vertical-align:middle}
+tr.done td:first-child{text-decoration:line-through;color:var(--mu)}
+td input,td select{min-width:120px}
+.kpi{border:1px solid var(--bd);border-radius:10px;padding:10px}.kpi b{display:block;font-size:20px}.kpi span{color:var(--mu);font-size:12px}
+@media (max-width:800px){
+  .app{display:block}.side{display:none;position:static;width:auto;height:auto}.side.open{display:flex}
+  .menu{display:inline-flex}.inline{flex-direction:column}
+}
+@media print{
+  .no-print,.no-print-actions .row{display:none!important}
+  body{background:#fff;font-size:12px}.page{padding:0;max-width:none}.card{border:0;padding:0}
+  .app,.main{display:block}
+}
